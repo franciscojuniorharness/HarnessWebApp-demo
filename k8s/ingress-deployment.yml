@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: ingress-{{.Values.name}}
   annotations:
-    kubernetes.io/ingress.global-static-ip-name: {{.Values.staticIp}}
+    #kubernetes.io/ingress.global-static-ip-name: {{.Values.staticIp}}
 spec:
   backend:
     serviceName: nodeport-{{.Values.name}}
