@@ -5,13 +5,14 @@ metadata:
   annotations:
     #kubernetes.io/ingress.global-static-ip-name: {{.Values.staticIp}}
     kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
   - host: test.ingress.com
     http:
       paths:
-      - path: /
+      - path: /{{.Values.servicePort}}
         backend:
           serviceName: nodeport-{{.Values.name}}
           servicePort: {{.Values.servicePort}}
