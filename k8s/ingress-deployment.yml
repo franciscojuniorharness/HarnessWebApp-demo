@@ -7,12 +7,13 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
 spec:
   ingressClassName: nginx
-  http:
-    paths:
-      - path: /{.Values.github_login}}
-        backend:
-          serviceName: nodeport-{{.Values.name}}
-          servicePort: {{.Values.servicePort}}
+  rules:
+    http:
+      paths:
+        - path: /{.Values.github_login}}
+          backend:
+            serviceName: nodeport-{{.Values.name}}
+            servicePort: {{.Values.servicePort}}
 #  backend:
 #    serviceName: nodeport-{{.Values.name}}
 #    servicePort: {{.Values.servicePort}}
