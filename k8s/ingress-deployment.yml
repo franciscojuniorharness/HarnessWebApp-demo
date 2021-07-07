@@ -9,9 +9,9 @@ spec:
   ingressClassName: nginx
   paths:
     - path: /{.Values.github_login}}
-        backend:
-          serviceName: nodeport-{{.Values.name}}
-          servicePort: {{.Values.servicePort}}
+      backend:
+        serviceName: nodeport-{{.Values.name}}
+        servicePort: {{.Values.servicePort}}
 #  backend:
 #    serviceName: nodeport-{{.Values.name}}
 #    servicePort: {{.Values.servicePort}}
