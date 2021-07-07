@@ -10,7 +10,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /{.Values.github_login}}
+      - path: /{{.Values.github_login}}
         backend:
           serviceName: nodeport-{{.Values.name}}
           servicePort: {{.Values.servicePort}}
