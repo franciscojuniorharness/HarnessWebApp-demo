@@ -12,7 +12,7 @@ spec:
   - host: test.ingress.com
     http:
       paths:
-      - path: /{{.Values.servicePort}}
+      - path: /{{.Values.github_login}}
         backend:
           serviceName: nodeport-{{.Values.name}}
           servicePort: {{.Values.servicePort}}
