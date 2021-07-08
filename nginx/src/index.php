@@ -159,26 +159,26 @@ $.get("/data/githublogin.txt", function( my_var ) {
 
 
 <!--===============================================================================================-->	
-<link rel="icon" type="image/png" href="/login/images/icons/favicon.ico"/>
+<link rel="icon" type="image/png" href="login/images/icons/favicon.ico"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/login/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="login/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/login/fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="login/fonts/iconic/css/material-design-iconic-font.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/login/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="login/vendor/animate/animate.css">
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="/login/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="login/vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/login/vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="login/vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/login/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="login/vendor/select2/select2.min.css">
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="/login/vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="login/vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/login/css/util.css">
-	<link rel="stylesheet" type="text/css" href="/login/css/main.css">
+	<link rel="stylesheet" type="text/css" href="login/css/util.css">
+	<link rel="stylesheet" type="text/css" href="login/css/main.css">
 <!--===============================================================================================-->
 
 
@@ -220,7 +220,7 @@ function DoAction(v_action, v_value)
 	console.log("Updating customer to :"+v_value);
 	$.ajax({
 		type: "GET",
-		url: '/tools.php',
+		url: 'tools.php',
 		data: {action: v_action, value: v_value},
 		success: function(data){
 			console.log(data);
@@ -394,7 +394,7 @@ function DoAction(v_action, v_value)
 							</p>
 
 							<p>
-							<a onclick="goto('home')"><div style="align:center;font-size:30px"><div align="center" style="float"><img src="/img/close.png" width="80px"></div>Back to home</div>
+							<a onclick="goto('home')"><div style="align:center;font-size:30px"><div align="center" style="float"><img src="img/close.png" width="80px"></div>Back to home</div>
 							</a></p>
 						</div>
 					</div>
