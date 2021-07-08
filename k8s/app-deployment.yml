@@ -52,7 +52,7 @@ spec:
       volumes:
       - name: volume
         persistentVolumeClaim:
-          claimName: {{.Values.volumeClaim}}
+          claimName: {{.Values.volumeClaim}}-{{.Values.name}}
       containers:
       - name: {{.Values.name}}
         image: {{.Values.image}}
