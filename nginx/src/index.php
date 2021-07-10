@@ -38,7 +38,7 @@ if (!empty($_GET['id']))
 //echo print_r($customerstore->findall());
 //DEFAULT
 if (!isset($_SESSION["link"]) || empty($_SESSION["link"])) $_SESSION["link"] = "https://harness.io/";
-if (!isset($_SESSION["logo"]) || empty($_SESSION["logo"])) $_SESSION["logo"] = "/img/harness-logo.png";
+if (!isset($_SESSION["logo"]) || empty($_SESSION["logo"])) $_SESSION["logo"] = "img/harness-logo.png";
 if (!isset($_SESSION["background"]) || empty($_SESSION["background"])) $_SESSION["background"] = "http://avante.biz/wp-content/uploads/Background-Pics-HD/Background-Pics-HD-001.jpg";
 if (!isset($_SESSION['buyer']))
 {
@@ -48,6 +48,7 @@ if (!isset($_SESSION['buyer']))
 	<!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>
+		<base href="/ecointet/"/>
 		<meta http-equiv="Cache-control" content="no-cache, must-revalidate">
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -77,7 +78,7 @@ var target = "ecointet"
 
 <script>
 // GET GITHUBLOGIN variable
-$.get("/data/githublogin.txt", function( my_var ) {
+$.get("data/githublogin.txt", function( my_var ) {
 	githublogin = my_var;
 });
 </script>
@@ -136,7 +137,7 @@ $.get("/data/githublogin.txt", function( my_var ) {
 				clearInterval(window.interval);
 
 				if (flagInfo["value"] == true)
-					var image = "img/canary-french.png";
+					var image = "/img/canary-french.png";
 				else
 					var image = "/img/captain-america.png";
 				
@@ -159,26 +160,26 @@ $.get("/data/githublogin.txt", function( my_var ) {
 
 
 <!--===============================================================================================-->	
-<link rel="icon" type="image/png" href="/login/images/icons/favicon.ico"/>
+<link rel="icon" type="image/png" href="login/images/icons/favicon.ico"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/login/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="login/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/login/fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="login/fonts/iconic/css/material-design-iconic-font.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/login/vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="login/vendor/animate/animate.css">
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="/login/vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="login/vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/login/vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="login/vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/login/vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="login/vendor/select2/select2.min.css">
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="/login/vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="login/vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="/login/css/util.css">
-	<link rel="stylesheet" type="text/css" href="/login/css/main.css">
+	<link rel="stylesheet" type="text/css" href="login/css/util.css">
+	<link rel="stylesheet" type="text/css" href="login/css/main.css">
 <!--===============================================================================================-->
 
 
@@ -220,7 +221,7 @@ function DoAction(v_action, v_value)
 	console.log("Updating customer to :"+v_value);
 	$.ajax({
 		type: "GET",
-		url: '/tools.php',
+		url: 'tools.php',
 		data: {action: v_action, value: v_value},
 		success: function(data){
 			console.log(data);
@@ -394,7 +395,7 @@ function DoAction(v_action, v_value)
 							</p>
 
 							<p>
-							<a onclick="goto('home')"><div style="align:center;font-size:30px"><div align="center" style="float"><img src="/img/close.png" width="80px"></div>Back to home</div>
+							<a onclick="goto('home')"><div style="align:center;font-size:30px"><div align="center" style="float"><img src="img/close.png" width="80px"></div>Back to home</div>
 							</a></p>
 						</div>
 					</div>
