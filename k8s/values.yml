@@ -26,5 +26,6 @@ volumeClaim: "harness-platform-demo-pvc"
 env:
   config:
     DB: ""
+    GITHUB_LOGIN: <+pipeline.variables.githublogin>
   secrets:
     key2: value2
