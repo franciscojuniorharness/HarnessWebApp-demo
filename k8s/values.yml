@@ -3,6 +3,7 @@ replicas: 1
 github_login: <+pipeline.variables.githublogin>
 image: <+artifact.image>
 #dockercfg: ${artifact.source.dockerconfig}
+dockercfg: <+artifact.imagePullSecret>
 
 createNamespace: true
 namespace: <+infra.namespace>
