@@ -313,7 +313,7 @@ function DoAction(v_action, v_value)
 						<div class="col-md-8 pb-40 header-text">
 							<h1>
 							<?php 
-							$url = $_SERVER['HTTP_HOST']."/?id=".$_SESSION['buyer'];
+							$url = $_SERVER['HTTP_HOST']."/".$_ENV["GITHUB_LOGIN"]."?id=".$_SESSION['buyer'];
 							//echo $url
 							?></h1>
 							<p>
