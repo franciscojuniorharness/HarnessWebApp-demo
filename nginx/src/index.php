@@ -48,7 +48,7 @@ if (!isset($_SESSION['buyer']))
 	<!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>
-		<base href="/ecointet/"/>
+		<base href="/<?php echo $_ENV["GITHUB_LOGIN"]; ?>/"/>
 		<meta http-equiv="Cache-control" content="no-cache, must-revalidate">
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -71,16 +71,17 @@ if (!isset($_SESSION['buyer']))
 
 <script>
 var interval = null;
-var target = "ecointet"
+var target = "<? echo $_ENV["GITHUB_LOGIN"]; ?>"
 </script>
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 <script>
+window.githublogin = "<? echo $_ENV["GITHUB_LOGIN"]; ?>";
 // GET GITHUBLOGIN variable
-$.get("data/githublogin.txt", function( my_var ) {
-	githublogin = my_var;
-});
+//$.get("data/githublogin.txt", function( my_var ) {
+//	githublogin = my_var;
+//});
 </script>
 
 
