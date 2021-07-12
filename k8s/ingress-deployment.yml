@@ -9,7 +9,7 @@ metadata:
 spec:
   #ingressClassName: nginx
   rules:
-  - host: test.ingress.com
+  - host: {{.Values.externalDnsName}}
     http:
       paths:
       - path: /{{.Values.github_login}}(/|$)(.*)
