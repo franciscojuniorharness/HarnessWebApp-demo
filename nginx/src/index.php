@@ -270,7 +270,7 @@ function DoAction(v_action, v_value)
 				      </div>
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
-				          <li class="menu-active"><a href="#home">Home Fran</a></li>
+				          <li class="menu-active"><a href="#home">Home</a></li>
 				          <li><a href="#service">share with people</a></li>
 						  <li class="menu-has-children"><a href="">CONFIG</a>
 				            <ul>
