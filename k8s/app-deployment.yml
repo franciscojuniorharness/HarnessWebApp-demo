@@ -53,6 +53,13 @@ spec:
       - name: volume
         persistentVolumeClaim:
           claimName: {{.Values.volumeClaim}}-{{.Values.name}}
+      initContainers:
+      - name: php-data-permission-fix
+        image: busybox
+        command: ["/bin/chmod","-R","777", "/data"]
+        volumeMounts:
+        - name: volume
+          mountPath: /data
       containers:
       - name: {{.Values.name}}
         image: {{.Values.image}}
@@ -70,10 +77,3 @@ spec:
             name: {{.Values.name}}
         {{- end}}
         {{- end}}
-     initContainers:
-     - name: php-data-permission-fix
-       image: busybox
-       command: ["/bin/chmod","-R","777", "/data"]
-       volumeMounts:
-       - name: volume
-         mountPath: /data
