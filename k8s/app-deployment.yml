@@ -64,7 +64,7 @@ spec:
       - name: {{.Values.name}}
         image: {{.Values.image}}
         volumeMounts:
-        - mountPath: /data-ext/sessions
+        - mountPath: /data-ext
           name: volume
         {{- if or .Values.env.config .Values.env.secrets}}
         envFrom:
