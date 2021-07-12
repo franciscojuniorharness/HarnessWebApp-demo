@@ -63,7 +63,7 @@ if (!isset($_SESSION['buyer']))
 		<!-- meta character set -->
 		<meta charset="UTF-8">
 		<!-- Site Title -->
-		<title>WebApp - <?php echo $_SESSION['buyer']?></title>
+		<title>WebApp - <?php echo $_ENV["GITHUB_LOGIN"]?></title>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 
@@ -138,9 +138,9 @@ window.githublogin = "<? echo $_ENV["GITHUB_LOGIN"]; ?>";
 				clearInterval(window.interval);
 
 				if (flagInfo["value"] == true)
-					var image = "/img/canary-french.png";
+					var image = "img/canary-french.png";
 				else
-					var image = "/img/captain-america.png";
+					var image = "img/captain-america.png";
 				
 				console.log(image);	
 				$('#vaccin').html('<a href="'+$( "#link" ).val()+'"><img src="'+image+'" width="200px" /></a>');
