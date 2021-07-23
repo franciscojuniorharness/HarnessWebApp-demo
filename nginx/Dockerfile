@@ -1,7 +1,7 @@
-FROM php:7.1-fpm      
+FROM ecointet/php-nginx:7     
 
-RUN apt-get update && \
-    apt-get install -y vim curl wget build-essential nginx supervisor gnupg2
+#RUN apt-get update && \
+#    apt-get install -y vim curl wget build-essential nginx supervisor gnupg2
 
 #RUN echo "deb http://packages.dotdeb.org jessie all" > /etc/apt/sources.list.d/dotdeb.list && \
 #    wget https://www.dotdeb.org/dotdeb.gpg && \
@@ -31,4 +31,4 @@ RUN echo $GITHUBLOGIN > /usr/data/data/githublogin.txt
 RUN  chmod -R 777 /usr/data/
 EXPOSE 8000
 
-CMD /usr/bin/supervisord -n -c /etc/supervisord.conf && chmod -R 777 /data-ext && mkdir -p /data-ext/sessions && chmod -R 777 /data-ext
+CMD /usr/bin/supervisord -n -c /etc/supervisord.conf && chmod -R 777 /data-ext
